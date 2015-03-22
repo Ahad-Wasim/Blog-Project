@@ -1,8 +1,76 @@
+
+
+aside{
+
+	width:30%;
+	background:yellow;
+	position:fixed;
+	height:100vh;
+	right:0px;	
+
+}
+
+aside h1{
+	color:rgba(255,0,0,0.3)
+}
+
+
 article{
 	border:1px solid black;
-	background:lavender;
+	background:grey;
+		
 }
+
+
 
 .main_articles article:nth-child(even) {
 	background: red;
+}
+
+.inside_image{
+	border:1px solid black;
+	display: table-cell;
+	margin-right: 10px;
+}
+
+.innner_inside_image{
+	width:100%;
+	background:orange;
+	border:5px solid purple;
+}
+
+.content_border{
+	border:1px solid red;
+	width:50%;
+	display:table;
+	height:400px;
+	margin:;
+
+}
+
+.header_bar{
+	border:1px solid blue;
+	
+}
+
+.text_border{
+	border:10px solid green;
+ 	display:inline-block;
+ 	width:60%;
+ 	display:table-cell;
+ 	margin-left: 5%;
+}
+
+.date{
+	border:1px solid orange;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+.small_comments{
+	margin-left:3%;
+}
+
+.sentence{
+	padding-bottom: 5px;
 }

@@ -14,17 +14,20 @@
 	<head>
 		<title>Register</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel ='stylesheet' href = "../bootstrap/css/bootstrap.min.css">   <!-- Remember to add php -->
+		<!-- <link rel ='stylesheet' href = "../bootstrap/css/bootstrap.min.css">   -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel = 'stylesheet' href = '../assets/css/main.css'>
 
 	</head>
 
 	<body>
 
-		<!--<form action = 'blog_validation.php' method = 'POST'>-->
+		<!--<form action = 'blog_validation.php' method = 'POST'>      This was using the post method-->
+
+		
 
 		<section id='adding'>
-		<form> <!-- Sending the results via ajax -->
+		<form> 
 
 		title: <input type ='text' name = 'title'><br><br>
 
@@ -34,10 +37,12 @@
 
 		Blog: <textarea placeholder= "Write your blog here" name = 'blog'></textarea><br><br>
 
-			<button id ='post_blog'>POST BLOG</button>
+			<button  type = 'button' id ='post_blog'>POST BLOG</button>
 
 	    </form>
 	    </section>
+
+	    
 
 
 

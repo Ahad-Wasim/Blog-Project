@@ -3,8 +3,9 @@
 $error = [];
 $output = [];
 
-if(isset($_POST['title']) && isset($_POST['date']) && isset($_POST['highlight']) && isset ($_POST['blog'])){
-	echo "The post is connecting to this file. <br>";
+//if(isset($_POST['title']) && isset($_POST['date']) && isset($_POST['highlight']) && isset ($_POST['blog']))
+if(isset($_POST)){
+	//echo "The post is connecting to this file. <br>";
 		if(empty($_POST['title'])){
 			echo $error['title'] = "Please enter in a title for your blog. <br>" ;
 		}
@@ -14,17 +15,20 @@ if(isset($_POST['title']) && isset($_POST['date']) && isset($_POST['highlight'])
 		if(empty($_POST['highlight'])){
 			echo $error['highlight'] = 'Your highlight is empty. <br>';
 		}
-		if(empty($_POST['blog'])){
-			echo $error['blog'] =  "your blog is empty. <br>"; 
+		if(empty($_POST['post_blog'])){
+			echo $error['post_blog'] =  "your blog is empty. <br>"; 
 		}
 
-		
+		//echo 21;
+
 		if(count($error) == 0){
 			$title = $_POST['title'];
 			$date = $_POST['date'];
 			$highlight = $_POST['highlight'];
-			$blog = $_POST['blog'];
+			$blog = $_POST['post_blog'];
 			$date_posted = date('D M Y', time());
+
+			//echo $title . $date . $highlight . $blog . $date_posted ;
 
 			$connection = mysqli_connect('localhost', 'root', '', 'blog_database');
 
@@ -32,15 +36,20 @@ if(isset($_POST['title']) && isset($_POST['date']) && isset($_POST['highlight'])
 		
 			$result = mysqli_query($connection, $query);
 
-			$ouput['success'] = true;
+			$output['success'] = true;
 			$output['message'] = "Everything seems to be inserting just fine";
 		} else {
-			echo 'You have an error You need to go back and fill in the require fields';
+			$output['success'] = false;
+			$output['message'] = 'You have an error You need to go back and fill in the require fields';
+			echo $error;
 		}
 
 
 
 } else {
+	echo 52;
+	echo json_encode($error);
+	
 	echo 'There is a problem within our Post Code';
 }
 
