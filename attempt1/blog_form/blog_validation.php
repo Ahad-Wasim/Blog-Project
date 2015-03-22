@@ -26,7 +26,7 @@ if(isset($_POST)){
 			$date = $_POST['date'];
 			$highlight = $_POST['highlight'];
 			$blog = $_POST['post_blog'];
-			$date_posted = date('D M Y', time());
+			$date_posted = date('M j Y', time());
 
 			//echo $title . $date . $highlight . $blog . $date_posted ;
 
@@ -38,6 +38,7 @@ if(isset($_POST)){
 
 			$output['success'] = true;
 			$output['message'] = "Everything seems to be inserting just fine";
+			
 		} else {
 			$output['success'] = false;
 			$output['message'] = 'You have an error You need to go back and fill in the require fields';

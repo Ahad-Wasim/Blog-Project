@@ -17,6 +17,8 @@
 		<!-- <link rel ='stylesheet' href = "../bootstrap/css/bootstrap.min.css">   -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 		<link rel = 'stylesheet' href = '../assets/css/main.css'>
+		<link rel ='stylesheet' href = '../assets/css/animate.css'>
+
 
 	</head>
 
@@ -27,22 +29,30 @@
 		
 
 		<section id='adding'>
-		<form> 
+		
+			<form action 'blog_validation.php' method = 'post' enctype = 'multipart/form-data'> 
 
-		title: <input type ='text' name = 'title'><br><br>
+				title: <input type ='text' name = 'title'><br><br>
 
-		Date: <input type = 'text' name = 'date'><br><br>
+				Date: <input type = 'text' name = 'date'><br><br>
 
-		Highlight:<input type='text' name = 'highlight' placeholder = "Write a quick statement to describe your blog post"><br><br>
+				Highlight:<input type='text' name = 'highlight' placeholder = "Write a quick statement to describe your blog post"><br><br>
 
-		Blog: <textarea placeholder= "Write your blog here" name = 'blog'></textarea><br><br>
+				Blog: <textarea placeholder= "Write your blog here" name = 'blog'></textarea><br><br>
 
-			<button  type = 'button' id ='post_blog'>POST BLOG</button>
+				<input type ='file' name='fileToUpload' id = 'fileToUpload'>
 
-	    </form>
+				<button  type = 'button' id ='post_blog'>POST BLOG</button>
+
+	    	</form>
+	    
+
 	    </section>
 
-	    
+
+	    <div class = 'display_container'></div>
+
+	   
 
 
 
@@ -51,6 +61,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>	
 		<script type = "text/javascript" src="../assets/javascript/ajax.js"></script>
+		<script src ='../assets/css/wow_js/wow.js'></script>
+		<script>
+			 new WOW().init();
+		</script>
 	</body>
 
 </html>

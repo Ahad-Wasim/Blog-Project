@@ -23,7 +23,7 @@ article{
 
 
 
-.main_articles article:nth-child(even) {
+.display_container article:nth-child(even) {
 	background: red;
 }
 

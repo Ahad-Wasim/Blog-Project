@@ -65,6 +65,6 @@ label{
 	<img src = "learningfuze.png"><br>
 	<label>Username:</label> <input type = 'text' name = 'user_name' placeholder='Username' class = 'username' size = '100'>
 	<label>Password:</label> <input type = 'password' name = 'password' placeholder = 'Password' = class= 'password' size = '100'>
-	<button type="button" class="btn btn-danger animated bounce">Log In</button>
+	<button type="submit" class="btn btn-danger animated bounce">Log In</button>
 </form>
 </div>

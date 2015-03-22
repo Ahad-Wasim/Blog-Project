@@ -22,12 +22,12 @@
 		//print_r($blog);
 
 
-			$html .= "<p>$title</p>";  
-		
-
-
 			
-			//"<article class = '$user_id'><div class = 'content_border container-fluid'><div class = 'inside_image'><div class = 'innner_inside_image'>dssffda</div></div><div class = 'text_border'>	<div class = 'header_bar'><h1>'$title'</h1></div><div class = 'date'><small class = 'small'>'$date'</small>  <small class= 'small_comments'>'$date_posted'</small></div><div class 'sentence'>'$highlight'</div><p>'$main_blog'</p></div></div></article>";
+			if($user_id % 2 == 0){
+			$html .= "<article class = '$user_id  wow animated slideInLeft '><div class = 'content_border container-fluid'><div class = 'inside_image'><div class = 'innner_inside_image'>dssffda</div></div><div class = 'text_border'>	<div class = 'header_bar'><h1>'$title'</h1></div><div class = 'date'><small class = 'small'>'$date'</small>  <small class= 'small_comments'>'$date_posted'</small></div><div class 'sentence'>'$highlight'</div><p>'$main_blog'</p></div></div></article>";
+			} else {
+				$html .= "<article class = '$user_id  wow animated slideInRight'><div class = 'content_border container-fluid'><div class = 'inside_image'><div class = 'innner_inside_image'>dssffda</div></div><div class = 'text_border'>	<div class = 'header_bar'><h1>'$title'</h1></div><div class = 'date'><small class = 'small'>'$date'</small>  <small class= 'small_comments'>'$date_posted'</small></div><div class 'sentence'>'$highlight'</div><p>'$main_blog'</p></div></div></article>";
+			}
 	}
 	
 

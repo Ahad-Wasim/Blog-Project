@@ -26,14 +26,7 @@ session_start();
 
 	<body>
 	
-<!--
-	<h1> Welcome You have now logged in     <?php print_r($_SESSION['user_information']['name']); ?>  </h1>
 
-
-	<a href = "blog_form/blog_inputs.php">Click here to create a blog post</a><br><br>
-		<a href = "login/log_out.php">Logout</a>
-
-	-->
 
 		
 
@@ -49,10 +42,15 @@ session_start();
 
 
 		<div class = 'main_articles'>  <!--container-fluid -->
+
+		<?php 
+			require("header.php");
+		?>
+
 			<div class = 'display_container'>
 
 
-
+<!--
 
 			<article class = 'container-fluid'>
 				<div class = 'row'>
@@ -60,7 +58,7 @@ session_start();
 							<div class = 'content_border col-xs-8'>
 						
 								<div class = 'inside_image'>
-									<div class = 'innner_inside_image'>dssffda</div>
+									<div class = 'innner_inside_image'>This will be my image</div>
 								</div>
 						
 							<div class = 'text_border'>	
@@ -91,24 +89,10 @@ session_start();
 	
 
 		</div>
+-->
 
 
-
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
-		<p>dlksafsklfdjs</p>
+		
 
 
 
