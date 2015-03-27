@@ -1,31 +1,42 @@
-
+a:hover{
+	cursor:pointer;
+}
 
 aside{
-
-	width:30%;
-	background:yellow;
+	color:white;
+	width:25%;
+	background:black;
 	position:fixed;
 	height:100vh;
 	right:0px;	
-
-}
-
-aside h1{
-	color:rgba(255,0,0,0.3)
+	z-index: 1;
 }
 
 
+aside a{
+	text-decoration: none;
+	font-size: 18px;
+	color:white;
+	display:block;
+}
+
+
+
+/*
 article{
 	border:1px solid black;
-	background:grey;
+	background:#C0A894;
 		
 }
 
 
-
-.display_container article:nth-child(even) {
-	background: red;
+article:nth-of-type(even){
+	background:#BBC0AA;
 }
+*/
+
+
+
 
 .inside_image{
 	border:1px solid black;
@@ -34,18 +45,19 @@ article{
 }
 
 .innner_inside_image{
-	width:100%;
-	background:orange;
 	border:5px solid purple;
+}
+
+.innner_inside_image img {
+	width: 100%;
 }
 
 .content_border{
 	border:1px solid red;
-	width:50%;
 	display:table;
-	height:400px;
-	margin:;
-
+	padding-top:5%;
+	padding-bottom:5%;
+	margin-left:4%;
 }
 
 .header_bar{
@@ -74,3 +86,65 @@ article{
 .sentence{
 	padding-bottom: 5px;
 }
+
+
+/*
+MEDIA QUEIRES
+*/
+
+
+
+
+@media (max-width: @screen-xs-max) {
+
+aside{
+	color:white;
+	display:block;
+	background:black;
+	height:20vh;
+	position:static;
+	z-index: 1;
+}
+
+
+
+aside a{
+	text-decoration: none;
+	font-size: 18px;
+	color:white;
+	display:inline-block;
+}
+
+}
+
+
+
+
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { 
+aside{
+	color:white;
+	display:block;
+	background:black;
+	height:20vh;
+	position:static;
+	z-index: 1;
+}
+
+
+
+aside a{
+	text-decoration: none;
+	font-size: 18px;
+	color:white;
+	display:inline-block;
+}
+ 
+}
+
+
+
+
+
+
+
