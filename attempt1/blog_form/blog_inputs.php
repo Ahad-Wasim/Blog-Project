@@ -1,13 +1,17 @@
 <?php
 session_start();
 
-
-if(!isset($_SESSION['user_information'])){
-		echo 'you are not logged in. Please log in or sign up to post awesome blogs';
-		header("location: ../login/login_form.php");
-		return;
-	}
-
+if (!isset($_SESSION['user_information'])) {
+    echo 'you are not logged in. Please log in or sign up to post awesome blogs';
+    header("location: ../login/login_form.php");
+    return;
+}
+if (isset($_GET['article_id'])) {
+    $single_article = true;
+}
+else{
+	$single_article = false;
+}
 ?>
 
 
@@ -34,17 +38,8 @@ if(!isset($_SESSION['user_information'])){
 
 		<!--<form action = 'blog_validation.php' method = 'POST'>      This was using the post method-->
 
-		<aside class = >
-			<h1>This is my nav bar</h1>
-			<div class = 'nav_lists'>
-			</div>
-
-
-
-
+		<aside>
 		</aside>
-
-
 
 		<style>
 			#adding{
@@ -56,8 +51,11 @@ if(!isset($_SESSION['user_information'])){
 				display:block;
 				border:1px solid black;
 			}
+			
 
-
+			html{
+	    		background:#BFBAB3;
+	    	}
 
 			input{
 				width:50%;
@@ -73,10 +71,15 @@ if(!isset($_SESSION['user_information'])){
 
 
 
+
+
 		
 
 		<section id='adding'>
 		
+		<?php 
+			if(!$single_article){    		// if single article is false display this else don't display anything at all.
+		?>
 			<form class = 'container' action="blog_validation.php" method="post" enctype="multipart/form-data"> 
 
 				<label>Title:</label><br>
@@ -96,39 +99,25 @@ if(!isset($_SESSION['user_information'])){
 				<button  type = 'submit' id ='post_blog'>POST BLOG</button>
 
 	    	</form>
+
+	    	<?php	
+			}
+	    	?> 
 	    
 
 	    </section>
 
 
+	   
+
 	    <div class = 'display_container'>
-	    
-	    <style>
-	    	html{
-	    		background:#BFBAB3;
-	    	}
-	    </style>
-
-	   
-
-	    <script>
-	    	/*
-	    	var display_container = document.querySelector('.display_container');
-	    	if(display_container.childNodes.length > 0) { 
-			var nothing = document.createElement('div');
-			nothing.style.color = '#BFBAB3';
-			display_container.appendChild(nothing);
-			}
-			*/
-		</script>
-	   
-	   
-
-	   <?php  include 'retrieve_blog.php'; 	// this will grab the echo from the retrieve blog file and display it below here?> 
+	 
+	   <?php
+		include 'retrieve_blog.php';
+ 		// this will grab the echo from the retrieve blog file and display it below here
+ 		?> 
 
 	    </div>
-
-	   
 
 
 
@@ -157,6 +146,9 @@ if(!isset($_SESSION['user_information'])){
 			var color_counter = 0;
 
 			var links = [];
+
+			var content = document.querySelectorAll('.header_bar h1');
+
 			
 
 
@@ -168,17 +160,29 @@ if(!isset($_SESSION['user_information'])){
 				links.push(articles[j]);
 
 				color_counter ++;
-				if(color_counter >color_array.length-1){
+				if(color_counter > color_array.length-1){
 					color_counter = 0;
 				}
 			}
 
-			for(var i =0;i<links.length;i++){
-				var blog_links =  $("<a href='#'>This would be link </a>");
-				$('aside').html(blog_links);
+			
+			for(var i =0;i<content.length;i++){
+			    
+				content[i].style.color='gold';		// if i want to add animations to that i would have to use that add class method
+				content[i].style.fontSize='20px';
+				console.log($(content[i]).parents('article').attr('id'));
+				var aTag = $('<a>').attr('href','#'+$(content[i]).parents('article').attr('id'));
+				aTag.append(content[i].innerHTML); 
+				$('aside').append(aTag);
+				
+
+
 			}
 
+
+
 		});
+		
 
 			// colors the articles
 		</script>

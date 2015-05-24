@@ -1,11 +1,42 @@
 $(document).ready(function() {
+
+    $('.sign_in').click(function(){
+         var userName = $('#loginInput').val();
+         var password = $('#password').val();
+         alert(userName + ' ' + password);
+         // This is now set
+    });
+
+    $('.sign_up').click(function(){
+        var fullName = $('#FullNameInput').val();
+        var userName = $('#UsernameInput').val();
+        var email = $('#email').val();
+        var password = $('#spassword').val();
+
+        alert(fullName + userName + email + password);
+        // This is now set    
+    });
+
+
+   
+//NOTE ALL THIS COULD BE CREATED WITH JAVASCRIPT BUT EVERYTHING IS COMMENTED OUT AND FULLY BUILT WITH PHP
+
+// $('body').on('click','.candy', function(){
+
     
+//    console.log($(this).parent().parent().parent().html());
+
+//    var content_html = $(this).parent().parent().parent().html();
+
+//     $.get('newpage.php', function(response){
+//         $('.hello').html(response);
+//     }
 
 
+// });      
 
 
-
-
+/*        Withouth Javascript ajax calls. Loading data on new page          */
 
     /*
     function loadpage() {

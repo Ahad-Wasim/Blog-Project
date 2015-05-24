@@ -1,10 +1,60 @@
+/* Index.php  CHECK*/
+#indexBody{
+	background:url(assets/css/images/beach.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;	
+}
+
+.index_h1{
+	font-family: 'Playball', cursive;
+	color:white;
+	font-size:50px;
+}
+
+.main_buttons{
+	width:250px;
+	margin-top:20px;
+	margin-left:15%;
+}
+
+.login{	
+	text-decoration: none;
+	font-size: 22px;
+	display:block;
+	width:100%;
+	padding-top:12px;
+	padding-bottom:12px; 
+	margin-bottom: 10px;
+}
+
+.register{
+	background-color: #DFCCB0;
+	color:white;
+	text-decoration: none;
+	font-size: 22px;
+	width:100%;
+	display:block;
+	padding-top:12px;
+	padding-bottom:12px; 
+}
+/* Index.php */
+
+
+
+
+
+
+
+
+
+
 a:hover{
 	cursor:pointer;
 }
 
 aside{
 	color:white;
-	width:25%;
+	width:20%;
 	background:black;
 	position:fixed;
 	height:100vh;
@@ -86,6 +136,9 @@ article:nth-of-type(even){
 .sentence{
 	padding-bottom: 5px;
 }
+
+
+
 
 
 /*

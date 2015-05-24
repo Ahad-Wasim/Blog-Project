@@ -45,7 +45,7 @@ if(isset($_POST)){															// if were getting post from the submit form
 
 		//echo 21;
 
-		if(count($error) == 0){												// if we have 0 ERRORS
+		 if(count($error) == 0){											// if we have 0 ERRORS
 			$title = addslashes($_POST['title']);							// example o'reilly == o/'reilly
 			$date = addslashes($_POST['date']);								// security
 			$highlight = addslashes($_POST['highlight']);					// security
@@ -61,7 +61,8 @@ if(isset($_POST)){															// if were getting post from the submit form
 			$move_succeeded = move_uploaded_file($image,$target_file);		// move the $image(temporary server location) to the directory (upload/ + [the file name]) or in easier context MOVING THE TEMPORARY SERVER LOCATION TO THE ACTUAL UPLOADS FOLDER
 			if($move_succeeded === false){									// if false file failed to move
 			echo "Their has been problems moving the files";
-			}																
+			} // this closes move succedded	
+
 
 			// ------ END File upload handling
 
