@@ -1,21 +1,21 @@
 $(document).ready(function() {
 
-    $('.sign_in').click(function(){
-         var userName = $('#loginInput').val();
-         var password = $('#password').val();
-         alert(userName + ' ' + password);
-         // This is now set
-    });
+    // $('.sign_in').click(function(){
+    //      var userName = $('#loginInput').val();
+    //      var password = $('#password').val();
+    //      alert(userName + ' ' + password);
+    //      // This is now set
+    // });
 
-    $('.sign_up').click(function(){
-        var fullName = $('#FullNameInput').val();
-        var userName = $('#UsernameInput').val();
-        var email = $('#email').val();
-        var password = $('#spassword').val();
+    // $('.sign_up').click(function(){
+    //     var fullName = $('#FullNameInput').val();
+    //     var userName = $('#UsernameInput').val();
+    //     var email = $('#email').val();
+    //     var password = $('#spassword').val();
 
-        alert(fullName + userName + email + password);
-        // This is now set    
-    });
+    //     alert(fullName + userName + email + password);
+    //     // This is now set    
+    // });
 
 
    

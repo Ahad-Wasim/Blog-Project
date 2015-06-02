@@ -32,7 +32,7 @@ if (mysqli_num_rows($result) > 0) {					// if the results returned is greater th
     $_SESSION['user_information'] = $user_info;		//	THIS IS WHAT IT LOOKS LIKE  look below
     //print_r($_SESSION['user_information']);		Array ( [username] => awasim [password] => 3222663e2753b84bbf5368fd9cd80434d8fc79a1 [name] => Ahad Wasim [email] => ahadwasim@yahoo.com [user_id] => 1 )
     echo " <br>  The user has successfully logged in";		
-   header("location: ../blog.php");					// redirect to the main page
+   header("location: ../practice.php");					// redirect to the main page
 } 
 else {
     echo "Sorry Incorrect Username or Password";  	// we havent returned anything from the database then we definately had problems.

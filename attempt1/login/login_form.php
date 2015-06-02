@@ -105,53 +105,51 @@ label{
 		</div>
 
 
-
-		<div class = 'modal fade' id = 'register'>
+			<div class = 'modal fade' id = 'register'>
 			<div class = 'modal-dialog'>
 				<div class = 'modal-content'>
-					<div class ='modal-header'>
-						<h1>Register</h1>
-					</div>
+					<form action = 'login/register.php' class = 'form-horizontal' method = 'post'>	
+						<div class ='modal-header'>
+							<h1>Register</h1>
+						</div>
 
-					<div class ='modal-body'>
-						 <form action ='' method= 'post'>
+						<div class ='modal-body'>
 							<div class = 'form-group'>
-								<label for ='FullNameInput' class = 'col-lg-2 control-label'>Full Name:</label>
+								<label for ='fullNameInput' class = 'col-lg-2 control-label'>FullName:</label>
+								<div class = 'col-lg-10'>
+									<input type = 'text' class = 'form-control' id = 'fullNameInput' name = 'fullNameInput' placeholder='John Doe'>
+								</div>
+							</div>
+
+							<div class = 'form-group'>
+								<label for ='userNameInput' class = 'col-lg-2 control-label'>Username:</label>
 									<div class = 'col-lg-10'>
-										<input type = 'text' class = 'form-control' id = 'FullNameInput' placeholder='John Doe'>
+										<input type = 'text' class = 'form-control' id = 'userNameInput' name = 'userNameInput' placeholder='Yo Mamma Jamma'>
 									</div>
 							</div>
 
 							<div class = 'form-group'>
-								<label for ='UsernameInput' class = 'col-lg-2 control-label'>Username:</label>
+								<label for ='emailInput' class = 'col-lg-2 control-label'>Email:</label>
 									<div class = 'col-lg-10'>
-										<input type = 'text' class = 'form-control' id = 'UsernameInput' placeholder='Yo Mamma Jamma'>
+										<input type = 'email' class = 'form-control' id = 'emailInput' name = 'emailInput' placeholder='abcd@email.com'>
 									</div>
 							</div>
-
-							<div class = 'form-group'>
-								<label for ='email' class = 'col-lg-2 control-label'>Email:</label>
-									<div class = 'col-lg-10'>
-										<input type = 'text' class = 'form-control' id = 'email' placeholder='abcd@yahoo.com'>
-									</div>
-							</div>
-
-
 
 							<div class = 'form-group'>
 								<label for ='spassword' class = 'col-lg-2 control-label'>Password:</label>
 									<div class = 'col-lg-10'>
 										<input type = 'password' class = 'form-control' id = 'spassword' placeholder='Enter Password'>
 									</div>
-							</div>	
-						  </form>
-					</div>
+							</div>
+
+						</div> <!-- This is for modal body -->
 
 					<div class ='modal-footer'>
-						<a class = 'btn btn-default' id = 'close' data-dismiss = 'modal'>Close</a>
-						<button class = 'sign_up btn btn-primary' type = 'submit'>Sign Up</button>
+						<a class = 'btn btn-default' id = 'close_sign_up' data-dismiss = 'modal'>Close</a>
+						<button class = 'sign_up btn btn-primary' type = 'submit'>Register</button>
 					</div>
 
+				</form>
 				</div>
 			</div>
-		</div> 
+		</div>

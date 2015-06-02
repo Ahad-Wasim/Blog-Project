@@ -73,24 +73,67 @@ if (mysqli_num_rows($result) > 0) {
         
         // We may want to change this			//NOTICE ON LINE 45 WE ARE DIRECTING THE FILE INSIDE THE CODE AND JUST INSERTING THE IMAGE NAME SO WE GRAB THE EXACT IMAGE
         
-        $html.= "<a name ='hello $article_id'></a>
-				<article class = '$article_id  wow animated $fade_class' id = '$article_id'>
-					<div class = 'content_border container'>
-						<div class = 'inside_image'>
-							<div class = 'innner_inside_image'>
-								<img src='../picture_upload/upload/$image' style = 'height: 300px;'> 
-							</div>
-						</div>
-						<div class = 'text_border'>
-							<div class = 'header_bar'><h1> $title </h1></div>
-							<div class = 'date'><small class = 'small'>$date</small>  <small class= 'small_comments'>$date_posted</small></div>
-							<div class 'sentence'>$highlight</div>
-							<p>$main_blog</p>
-							<a href ='?article_id=$article_id' class = 'candy' style = 'margin-left: 50%'>Click Here to go to  a new page</a>
+    //     $html.= "<a name ='hello $article_id'></a>
+				// <article class = '$article_id  wow animated $fade_class' id = '$article_id'>
+				// 	<div class = 'content_border container'>
+				// 		<div class = 'inside_image'>
+				// 			<div class = 'innner_inside_image'>
+				// 				<img src='../picture_upload/upload/$image' style = 'height: 300px;'> 
+				// 			</div>
+				// 		</div>
+				// 		<div class = 'text_border'>
+				// 			<div class = 'header_bar'><h1> $title </h1></div>
+				// 			<div class = 'date'><small class = 'small'>$date</small>  <small class= 'small_comments'>$date_posted</small></div>
+				// 			<div class 'sentence'>$highlight</div>
+				// 			<p>$main_blog</p>
+				// 			<a href ='?article_id=$article_id' class = 'candy' style = 'margin-left: 50%'>Click Here to go to  a new page</a>
 
-						</div>
-					</div>
-				</article>";
+				// 		</div>
+				// 	</div>
+				// </article>";
+
+               
+                $html.= "<a name ='hello $article_id'></a>
+                 <section class = '$article_id  wow animated $fade_class' id = '$article_id'>   
+                    <div class='profile'>
+
+                          <div class = 'image'>
+                             <img class='article_pic' src='../picture_upload/upload/$image'>
+                         </div>
+
+
+                        <div class = 'information-text'>
+                            <div class = 'title'>
+                                <h3>$title</h3>
+                            </div>
+
+                            <div class = 'date-comments-row'>
+                                <div class = 'date-left'>
+                                    <h5>$date</h5>
+                                </div>
+
+                                <div class = 'comments'>
+                                    <h5>$date_posted</h5>
+                                </div>
+                            </div>
+
+                            <div class = 'main-info'>
+                                <p>$main_blog</p>
+                            </div>
+                        </div>
+
+                        <div class = 'click-blog'>
+                            <div class = 'click-blog-button'>
+                                <a href ='?article_id=$article_id' class = 'btn btn-success candy'>Click To View This Blog</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>";  
+            
+
+
+        
         
         //  ../picture_upload/picture_form.php
         
